@@ -1,0 +1,25 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %} Homepage {% endblock %}
+
+{% block  content %}
+{% include 'partials/navbar.html' %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 mt-4 p-4">
+            <img style="width: 120%; border-radius: 3%;" src="{% static 'assets/image4.jpg' %}" alt="">
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-7 p-4 mt-4">
+            <div class="card">
+                dksf
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

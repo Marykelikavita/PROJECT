@@ -1,0 +1,40 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %} Registration Page {% endblock %}
+
+{% block  content %}
+{% include 'partials/navbar.html' %}
+<div class="container">
+  <div class="row  mt-5">
+    <div class="col-md-4"></div>
+    <div style="font-family:'Times New Roman', Times, serif;" class="col-md-5 pl-5">
+      {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+      {% endif %}
+     <form method="post">
+      <h3 "> Register</h3>
+      {% csrf_token %}
+      <label for=""> Username</label><br>
+      {{register_form.username}}<br>
+      <label for=""> Email </label><br>
+      {{register_form.email}}<br>
+      <label for=""> Enter Password </label><br>
+      {{register_form.password1}}<br>
+      <label for=""> Confirm Password </label><br>
+      {{register_form.password2}}<br>
+      <input class="mt-3 btn btn-secondary btn-block" type="submit" value="Register"><br>
+      <span> Already have an account ?</span> <a href="{% url 'login' %}">Login</a><br>
+      
+     </form>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+{% endblock %}
+
