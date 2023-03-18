@@ -13,8 +13,12 @@
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-7 p-4 mt-4">
-            <div class="card">
-                dksf
+            <div class="card p-3">
+                <form  method="post">
+                    {% csrf_token %}
+                    {{form|crispy}}
+                    <input class="btn btn-success" type="submit" value="PREDICT">
+                </form>
             </div>
         </div>
     </div>

@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'front.apps.FrontConfig',
-    
     'crispy_forms',
-    'channels',
+    'crispy_bootstrap4',
+   
     
 ]
 
@@ -135,7 +135,6 @@ STATIC_ROOT = (BASE_DIR/"asert/")
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
